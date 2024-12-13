@@ -17,7 +17,7 @@ def calculate_average(numbers):
         return 0
     except TypeError:
         print(f'В numbers записан некорректный тип данных')
-        return None
+
 
 
 
