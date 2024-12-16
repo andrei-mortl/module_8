@@ -12,10 +12,11 @@ class Car:
     """Класс автомобилей"""
     def __init__(self, model, __vin, __numbers):
         self.model = str(model)
-        self.__vin = int(__vin)
-        self.__is_valid_vin(self.__vin)
-        self.__numbers = str(__numbers)
-        self.__is_valid_numbers(self.__numbers)
+        if self.__is_valid_numbers(__numbers):
+            self.__numbers = __numbers
+        if self.__is_valid_vin(__vin):
+            self.__vin = __vin
+
 
     def __is_valid_vin(self, vin_number):
         if not isinstance(vin_number, int):
